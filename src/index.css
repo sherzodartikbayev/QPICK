@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #eaeaea;
+}
+
+/* Padding Styles */
+.paddingX {
+	@apply sm:px-[165px] px-6;
+}
+
+/* Flex Styles */
+.flex-center {
+	@apply flex justify-center items-center;
+}
+
+.flex-between {
+	@apply flex justify-between items-center;
+}
+
+.flex-start {
+	@apply flex justify-center items-start;
+}
+
+/* Font Styles */
+.product-card-title {
+	@apply font-montserrat font-semibold text-[17px] leading-5
+}
