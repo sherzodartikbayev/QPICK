@@ -9,7 +9,7 @@ export default {
 			gray: '#838383',
 			lightGray: '#eaeaea',
 			red: '#df6464',
-			orange: '###ffa542',
+			orange: '#ffa542',
 		},
 		fontFamily: {
 			montserrat: ['Montserrat', 'sans-serif'],

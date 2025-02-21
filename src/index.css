@@ -31,3 +31,10 @@ body {
 .product-card-title {
 	@apply font-montserrat font-semibold text-[17px] leading-5
 }
+
+/* Navbar Styles */
+.drop-down button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
