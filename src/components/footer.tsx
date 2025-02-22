@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { ContactSocialMedias } from '../constants'
 
 const Footer = () => {
 	return (
@@ -66,46 +67,16 @@ const Footer = () => {
 
 				{/* Social Media */}
 				<div className='flex-between gap-4'>
-					<Link
-						rel='noopener noreferrer'
-						to='https://vk.com/'
-						className='cursor-pointer w-8'
-					>
-						<img src='/icons/vk.svg' alt='VK' />
-					</Link>
-					<Link
-						rel='noopener noreferrer'
-						to='https://www.instagram.com/'
-						className='cursor-pointer w-8'
-					>
-						<img
-							src='/icons/instagram.svg'
-							alt='Instagram'
-							className='size-full object-contain'
-						/>
-					</Link>
-					<Link
-						rel='noopener noreferrer'
-						to='https://telegram.org/'
-						className='cursor-pointer w-8'
-					>
-						<img
-							src='/icons/telegram.svg'
-							alt='Telegram'
-							className='size-full object-contain'
-						/>
-					</Link>
-					<Link
-						rel='noopener noreferrer'
-						to='https://www.whatsapp.com/'
-						className='cursor-pointer w-8'
-					>
-						<img
-							src='/icons/whatsapp.svg'
-							alt='Whatsapp'
-							className='size-full object-contain'
-						/>
-					</Link>
+					{ContactSocialMedias.map(({ id, src, alt, href }) => (
+						<Link
+							rel='noopener noreferrer'
+							to={href}
+							className='cursor-pointer w-8'
+							key={id}
+						>
+							<img src={src} alt={alt} />
+						</Link>
+					))}
 				</div>
 			</div>
 		</footer>

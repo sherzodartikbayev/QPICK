@@ -11,7 +11,7 @@ const ServiceTerms = () => {
 				{ServiceTermsData.map(({ id, title, descr }) => (
 					<div
 						key={id}
-						className='w-full rounded-[20px] bg-white py-4 px-7 shadow-md shadow-gray mb-9'
+						className='w-full rounded-[20px] bg-white py-4 px-7 drop-shadow-lg shadow-gray mb-9'
 					>
 						<h1 className='font-semibold text-[17px] leading-5 mb-3'>
 							{title}

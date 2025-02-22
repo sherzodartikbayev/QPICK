@@ -1,3 +1,4 @@
+// Navbar Component
 export const navbarLinks = [
 	{
 		id: 1,
@@ -49,6 +50,7 @@ export const navbarLinks = [
 	},
 ]
 
+// Service Terms Page
 export const ServiceTermsData = [
 	{
 		id: 1,
@@ -67,5 +69,33 @@ export const ServiceTermsData = [
 		title: 'Условия возврата',
 		descr:
 			'Задача организации, в особенности же курс на социально-ориентированный национальный проект требует от нас системного анализа модели развития! Таким образом, постоянное информационно-техническое обеспечение нашей деятельности требует от нас анализа системы масштабного изменения ряда параметров! С другой стороны социально-экономическое развитие напрямую зависит от всесторонне сбалансированных нововведений?',
+	},
+]
+
+// Contact Page & Footer Component
+export const ContactSocialMedias = [
+	{
+		id: 1,
+		src: '/icons/whatsapp.svg',
+		alt: 'WhatsApp',
+		href: 'https://www.whatsapp.com/'
+	},
+	{
+		id: 2,
+		src: '/icons/vk.svg',
+		alt: 'VK',
+		href: 'https://vk.com/'
+	},
+	{
+		id: 3,
+		src: '/icons/instagram.svg',
+		alt: 'Instagram',
+		href: 'https://www.instagram.com/'
+	},
+	{
+		id: 4,
+		src: '/icons/telegram.svg',
+		alt: 'Telegram',
+		href: 'https://telegram.org/'
 	},
 ]

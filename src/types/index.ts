@@ -1,3 +1,5 @@
 export interface ButtonProps {
-	children: string
+	children: string,
+	link?: string,
+	className?: string
 }

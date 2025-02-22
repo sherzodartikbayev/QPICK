@@ -20,7 +20,7 @@ const Favorite = () => {
 					Но это никогда не поздно исправить :)
 				</p>
 				</div>
-				<Button>В каталог товаров</Button>
+				<Button link='/'>В каталог товаров</Button>
 			</div>
 		</section>
 	)
