@@ -7,7 +7,7 @@ const Navbar = () => {
 	const [isOpenMenu, setIsOpenMenu] = useState(false)
 
 	return (
-		<header className='max-w-7xl paddingX'>
+		<header className='max-w-7xl paddingX mx-auto'>
 			<div className='container w-full h-[60px] flex-between relative'>
 				{/* Logo */}
 				<Link to='/'>
@@ -64,7 +64,7 @@ const Navbar = () => {
 					</Link>
 
 					{/* Mobile Navbar */}
-					<div>
+					<div className='md:hidden'>
 						<img
 							src='/icons/menu.svg'
 							alt='menu icon'
@@ -78,7 +78,7 @@ const Navbar = () => {
 
 			 <div
 				className={`${
-					isOpen ? 'block duration-500' : 'hidden'
+					isOpen ? 'block' : 'hidden'
 				} w-3/4 h-full absolute top-0 right-0 bg-white drop-shadow-2xl shadow-black rounded-tl-2xl rounded-bl-2xl overflow-hidden`}
 			>
 				<div
