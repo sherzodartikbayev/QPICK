@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
 	return (
-		<footer className='max-w-7xl paddingX flex-center max-md:hidden'>
+		<footer className='max-w-7xl mx-auto paddingX flex-center max-md:hidden'>
 			<div className='container w-[1110px] px-7 py-7 flex justify-between items-start flex-wrap bg-white rounded-t-[20px] max-md:gap-10 '>
 				{/* Logo */}
 				<Link to='/' className='w-24'>

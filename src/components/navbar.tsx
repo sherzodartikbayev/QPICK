@@ -44,6 +44,7 @@ const Navbar = () => {
 								<a
 									href='#'
 									className='transition-all duration-300 hover:text-orange active:text-orange cursor-pointer text-[15px] leading-4 font-medium'
+									onClick={() => setIsOpen(false)}
 								>
 									{title}
 								</a>
@@ -76,7 +77,7 @@ const Navbar = () => {
 				</div>
 			</div>
 
-			 <div
+			<div
 				className={`${
 					isOpen ? 'block' : 'hidden'
 				} w-3/4 h-full absolute top-0 right-0 bg-white drop-shadow-2xl shadow-black rounded-tl-2xl rounded-bl-2xl overflow-hidden`}
@@ -97,7 +98,10 @@ const Navbar = () => {
 							Выбрать модель телефона
 						</p>
 					</div>
-					<div className='flex items-center w-full cursor-pointer mb-3 select-none' onClick={() => setIsOpenMenu(!isOpenMenu)}>
+					<div
+						className='flex items-center w-full cursor-pointer mb-3 select-none'
+						onClick={() => setIsOpenMenu(!isOpenMenu)}
+					>
 						<span>
 							<img
 								src='/icons/down-back.svg'
@@ -109,10 +113,18 @@ const Navbar = () => {
 						<p className='text-xl font-medium leading-5 ml-2'>Apple</p>
 					</div>
 
-					<ul className={`px-5 overflow-scroll overflow-x-hidden h-72 ${isOpenMenu ? 'block' : 'hidden'}`}>
+					<ul
+						className={`px-5 overflow-scroll overflow-x-hidden h-72 ${
+							isOpenMenu ? 'block' : 'hidden'
+						}`}
+					>
 						{navbarLinks.map(({ id, title }) => (
 							<li key={id} className='py-1'>
-								<a href='#' className='text-lg font-medium leading-5  transition-all duration-300 hover:text-orange active:text-orange'>
+								<a
+									href='#'
+									className='text-lg font-medium leading-5  transition-all duration-300 hover:text-orange active:text-orange'
+									onClick={() => setIsOpen(false)}
+								>
 									{title}
 								</a>
 							</li>
@@ -123,7 +135,13 @@ const Navbar = () => {
 				<div className='absolute bottom-10 left-0 flex gap-4 flex-col px-9'>
 					<div className='flex gap-[10px]'>
 						<img src='/icons/favorite.svg' alt='favorite icon' width={20} />
-						<Link to='/favorites' className='navbar__mobile__text'>Избранное</Link>
+						<Link
+							to='/favorites'
+							className='navbar__mobile__text'
+							onClick={() => setIsOpen(false)}
+						>
+							Избранное
+						</Link>
 					</div>
 					<div className='flex gap-[10px]'>
 						<img
@@ -131,20 +149,38 @@ const Navbar = () => {
 							alt='favorite icon'
 							width={15}
 						/>
-						<Link to='/service-terms' className='navbar__mobile__text'>Условия сервиса</Link>
+						<Link
+							to='/service-terms'
+							className='navbar__mobile__text'
+							onClick={() => setIsOpen(false)}
+						>
+							Условия сервиса
+						</Link>
 					</div>
 					<div className='flex gap-[10px]'>
 						<img src='/icons/contact.svg' alt='favorite icon' width={15} />
-						<Link to='/contact' className='navbar__mobile__text'>Контакты</Link>
+						<Link
+							to='/contact'
+							className='navbar__mobile__text'
+							onClick={() => setIsOpen(false)}
+						>
+							Контакты
+						</Link>
 					</div>
 					<div className='flex gap-[10px]'>
 						<img src='/icons/language.svg' alt='language icon' width={15} />
-						<Link to='#' className='navbar__mobile__text'>Каз</Link>
-						<Link to='#' className='navbar__mobile__text'>Рус</Link>
-						<Link to='#' className='navbar__mobile__text'>Eng</Link>
+						<Link to='#' className='navbar__mobile__text'>
+							Каз
+						</Link>
+						<Link to='#' className='navbar__mobile__text'>
+							Рус
+						</Link>
+						<Link to='#' className='navbar__mobile__text'>
+							Eng
+						</Link>
 					</div>
 				</div>
-			</div> 
+			</div>
 		</header>
 	)
 }
