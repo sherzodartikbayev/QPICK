@@ -37,4 +37,8 @@ body {
   opacity: 1;
   pointer-events: all;
   transform: translateY(0);
+} 
+
+.navbar__mobile__text {
+	@apply text-[15px] font-medium leading-5 hover:text-orange transition-all duration-300
 }
