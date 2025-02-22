@@ -7,7 +7,7 @@ const Navbar = () => {
 	const [isOpenMenu, setIsOpenMenu] = useState(false)
 
 	return (
-		<header className='max-w-7xl paddingX mx-auto'>
+		<header className='max-w-7xl paddingX mx-auto z-10'>
 			<div className='container w-full h-[60px] flex-between relative'>
 				{/* Logo */}
 				<Link to='/'>
@@ -15,7 +15,7 @@ const Navbar = () => {
 				</Link>
 
 				{/* Drop Down Menu */}
-				<div className='relative -left-20 drop-down max-md:hidden'>
+				<div className='relative -left-20 drop-down max-md:hidden z-10'>
 					<button className='flex items-center gap-4'>
 						<span>
 							<img src='/icons/phone.svg' alt='phone' width={15} />
