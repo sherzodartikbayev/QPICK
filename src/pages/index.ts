@@ -1,4 +1,5 @@
 export { default as Cart } from './cart'
+export { default as Catalog } from './catalog'
 export { default as Checkout } from './checkout'
 export { default as Contact } from './contact'
 export { default as Favorite } from './favorite'

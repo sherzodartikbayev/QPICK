@@ -1,9 +1,11 @@
-const Banner = () => {
+import { BannerProps } from '../types'
+
+const Banner = ({ children }: BannerProps) => {
 	return (
 		<div className='max-w-[1110px] h-48 bg-black rounded-[30px] mt-6 px-14 flex-between overflow-hidden max-md:px-6'>
 			<div>
 				<p className='font-semibold text-3xl text-white leading-9 max-md:text-xl max-md:leading-6'>
-					Аксессуары для <br /> Iphone 13 Pro Max
+					{children}
 				</p>
 			</div>
 
