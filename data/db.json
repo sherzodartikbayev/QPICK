@@ -1,30 +1,27 @@
 {
 	"cases": [
 		{
-			"id": "1",
+			"id": "case",
 			"title": "Стеклянные",
-			"image": "/cases/1.png",
-			"isFavorite": false,
+			"image": "/images/cases/1.png",
 			"price": "1 690 ₸",
 			"oldPrice": "2 000 ₸",
 			"discount": "-15%",
 			"descr": "Стеклянные чехол от Apple — отличное дополнение к вашему iPhone 13. Он плотно прилегает к кнопкам громкости и режима сна, точно повторяет контуры телефона и при этом не делает его громоздким. Мягкая подкладка из микрофибры защищает корпус вашего iPhone, а внешняя силиконовая поверхность приятна на ощупь. Чехол не придётся снимать даже во время беспроводной зарядки."
 		},
 		{
-			"id": "2",
+			"id": "case-2",
 			"title": "Силиконовые",
-			"image": "/cases/2.png",
-			"isFavorite": false,
+			"image": "/images/cases/2.png",
 			"price": "1 690 ₸",
 			"oldPrice": "2 000 ₸",
 			"discount": "-15%",
 			"descr": "Классический Silicone Case в новом исполнении - Защита корпуса смартфона со всех сторон, + максимальная защита блока камеры, с бортиком в 2мм, с которым более нет необходимости приобретать дополнительное защитное стекло для камеры. Мягкий софт-тач силикон дает максимально приятные ощущения при использовании вашего смартфона, а внутренняя бархатистая подкладка, не допустит царапины на задней стеклянной крышке."
 		},
 		{
-			"id": "3",
+			"id": "case-3",
 			"title": "Кожаные",
-			"image": "/cases/3.png",
-			"isFavorite": false,
+			"image": "/images/cases/3.png",
 			"price": "2 390 ₸",
 			"oldPrice": "3 000 ₸",
 			"discount": "-25%",
@@ -33,14 +30,13 @@
 	],
 	"headphones": [
 		{
-			"id": "1",
+			"id": "apple-byz-s852i",
 			"title": "Apple BYZ S852I",
-			"image": "/headphones/1.png",
-			"isFavorite": false,
+			"image": "/images/headphones/1.png",
 			"price": "2927 ₸",
 			"oldPrice": "3527 ₸",
 			"discount": "-20%",
-			"start": "4.7",
+			"star": "4.7",
 			"details": [
 				"Микрофон: Да",
 				"Назначение: Проводные наушники",
@@ -53,12 +49,11 @@
 			]
 		},
 		{
-			"id": "2",
+			"id": "apple-earpods",
 			"title": "Apple EarPods",
-			"image": "/headphones/2.png",
-			"isFavorite": false,
+			"image": "/images/headphones/2.png",
 			"price": "2327 ₸",
-			"start": "4.5",
+			"star": "4.5",
 			"details": [
 				"Влагозащита: Нет",
 				"Длина кабеля: 14.2 mm",
@@ -73,12 +68,11 @@
 			]
 		},
 		{
-			"id": "3",
+			"id": "apple-earpods-2",
 			"title": "Apple EarPods",
-			"image": "/headphones/3.png",
-			"isFavorite": false,
+			"image": "/images/headphones/3.png",
 			"price": "2327 ₸",
-			"start": "4.5",
+			"star": "4.5",
 			"details": [
 				"Длина кабеля: 3.5",
 				"Микрофон: Да",
@@ -96,10 +90,9 @@
 	],
 	"airpods": [
 		{
-			"id": "1",
+			"id": "apple-airpods",
 			"title": "Apple AirPods",
-			"image": "/airpods/1.png",
-			"isFavorite": false,
+			"image": "/images/airpods/1.png",
 			"price": "9527 ₸",
 			"star": "4.7",
 			"details": [
@@ -122,10 +115,9 @@
 			]
 		},
 		{
-			"id": "2",
+			"id": "gerlax-gh-04",
 			"title": "GERLAX GH-04",
-			"image": "/airpods/2.png",
-			"isFavorite": false,
+			"image": "/images/airpods/2.png",
 			"price": "6527 KZT",
 			"star": "4.7",
 			"details": [
@@ -152,10 +144,9 @@
 			]
 		},
 		{
-			"id": "3",
+			"id": "borofone-b04",
 			"title": "BOROFONE BO4",
-			"image": "/airpods/3.png",
-			"isFavorite": false,
+			"image": "/images/airpods/3.png",
 			"price": "7527 KZT",
 			"star": "4.7",
 			"details": [

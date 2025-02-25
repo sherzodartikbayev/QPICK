@@ -22,7 +22,7 @@ const Cart = () => {
 						Но это никогда не поздно исправить :)
 					</p>
 				</div>
-				<Button link='/'>В каталог товаров</Button>
+				<Button link='/' className='max-w-[540px]'>В каталог товаров</Button>
 			</div>
 		</section>
 	)

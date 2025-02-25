@@ -1,10 +1,14 @@
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { navbarLinks } from '../constants'
+import { selectFavorites } from '../favorites-slice/favorites-slice'
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	const [isOpenMenu, setIsOpenMenu] = useState(false)
+
+	const favorites = useSelector(selectFavorites)
 
 	return (
 		<header className='max-w-7xl paddingX mx-auto z-10'>
@@ -55,8 +59,13 @@ const Navbar = () => {
 
 				<div className='flex gap-10 items-center'>
 					{/* Favorite */}
-					<Link to='/favorites' className='max-md:hidden'>
+					<Link to='/favorites' className='max-md:hidden relative'>
 						<img src='/icons/favorite.svg' alt='favorite icon' width={22} />
+						{favorites.length >= 1 && (
+							<div className='absolute -top-3 -right-3 w-5 h-5 rounded-full bg-orange flex-center'>
+								<p className='font-medium text-lg leading-4 text-white'>{favorites.length}</p>
+							</div>
+						)}
 					</Link>
 
 					{/* Cart */}
@@ -80,7 +89,7 @@ const Navbar = () => {
 			<div
 				className={`${
 					isOpen ? 'block' : 'hidden'
-				} w-3/4 h-full absolute top-0 right-0 bg-white drop-shadow-2xl shadow-black rounded-tl-2xl rounded-bl-2xl overflow-hidden`}
+				} w-3/4 h-full fixed top-0 right-0 bg-white drop-shadow-2xl shadow-black rounded-tl-2xl rounded-bl-2xl overflow-hidden z-10`}
 			>
 				<div
 					className='w-7 h-7 rounded-lg absolute top-5 right-5 cursor-pointer'

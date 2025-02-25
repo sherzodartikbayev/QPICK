@@ -9,3 +9,14 @@ export interface ButtonProps {
 export interface BannerProps {
 	children: ReactNode
 }
+
+export interface Product {
+  id: string;
+  title: string;
+	image: string,
+  price: string;
+	oldPrice?: string;
+	discount?: string; 
+	star?: string;
+	descr?: string;
+}

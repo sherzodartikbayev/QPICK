@@ -11,7 +11,7 @@ body {
 
 /* Padding Styles */
 .paddingX {
-	@apply sm:px-[165px] px-6;
+	@apply sm:px-[100px] px-6;
 }
 
 /* Flex Styles */
