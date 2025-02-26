@@ -1,9 +1,10 @@
 {
-	"cases": [
+	"products": [
 		{
 			"id": "case",
 			"title": "Стеклянные",
 			"image": "/images/cases/1.png",
+			"type": "Чехол",
 			"price": "1 690 ₸",
 			"oldPrice": "2 000 ₸",
 			"discount": "-15%",
@@ -13,6 +14,7 @@
 			"id": "case-2",
 			"title": "Силиконовые",
 			"image": "/images/cases/2.png",
+			"type": "Чехол",
 			"price": "1 690 ₸",
 			"oldPrice": "2 000 ₸",
 			"discount": "-15%",
@@ -22,17 +24,17 @@
 			"id": "case-3",
 			"title": "Кожаные",
 			"image": "/images/cases/3.png",
+			"type": "Чехол",
 			"price": "2 390 ₸",
 			"oldPrice": "3 000 ₸",
 			"discount": "-25%",
 			"descr": "Встроенные магниты точно совпадают с магнитами на задней поверхности — они надёжно удерживают чехол и обеспечивают более быструю беспроводную зарядку. Снимать чехол на время зарядки не нужно — достаточно прикрепить зарядное устройство или положить iPhone на зарядное устройство стандарта Qi."
-		}
-	],
-	"headphones": [
+		},
 		{
 			"id": "apple-byz-s852i",
 			"title": "Apple BYZ S852I",
 			"image": "/images/headphones/1.png",
+			"type": "Наушники",
 			"price": "2927 ₸",
 			"oldPrice": "3527 ₸",
 			"discount": "-20%",
@@ -52,6 +54,7 @@
 			"id": "apple-earpods",
 			"title": "Apple EarPods",
 			"image": "/images/headphones/2.png",
+			"type": "Наушники",
 			"price": "2327 ₸",
 			"star": "4.5",
 			"details": [
@@ -71,6 +74,7 @@
 			"id": "apple-earpods-2",
 			"title": "Apple EarPods",
 			"image": "/images/headphones/3.png",
+			"type": "Наушники",
 			"price": "2327 ₸",
 			"star": "4.5",
 			"details": [
@@ -86,13 +90,12 @@
 				"Частотный диапазон: 10 Гц - 20 Гц",
 				"Чувствительность: 109 дБ"
 			]
-		}
-	],
-	"airpods": [
+		},
 		{
 			"id": "apple-airpods",
 			"title": "Apple AirPods",
 			"image": "/images/airpods/1.png",
+			"type": "Беспроводные наушники",
 			"price": "9527 ₸",
 			"star": "4.7",
 			"details": [
@@ -118,6 +121,7 @@
 			"id": "gerlax-gh-04",
 			"title": "GERLAX GH-04",
 			"image": "/images/airpods/2.png",
+			"type": "Беспроводные наушники",
 			"price": "6527 KZT",
 			"star": "4.7",
 			"details": [
@@ -147,6 +151,7 @@
 			"id": "borofone-b04",
 			"title": "BOROFONE BO4",
 			"image": "/images/airpods/3.png",
+			"type": "Беспроводные наушники",
 			"price": "7527 KZT",
 			"star": "4.7",
 			"details": [

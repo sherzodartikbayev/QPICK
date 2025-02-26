@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { toggleFavorite } from '../favorites-slice/favorites-slice'
 import { RootState } from '../store/store'
 import { Product } from '../types'
@@ -8,25 +9,27 @@ const Card = ({ product }: { product: Product }) => {
 	const favorites = useSelector((state: RootState) => state.favorites)
 	const isFavorite = favorites.some(item => item.id === product.id)
 
-	return (
-		<div className='relative w-[340px] h-[400px] max-sm:w-full bg-white rounded-[20px] drop-shadow-lg shadow-black'>
-			<div className='py-5 px-5 flex items-center justify-between flex-col gap-6 h-full'>
-				<div
-					className='absolute top-4 left-6 w-5 h-5 cursor-pointer'
-					onClick={() => dispatch(toggleFavorite(product))}
-				>
-					<img
-						src={
-							isFavorite
-								? '/icons/remove-favorite.svg'
-								: '/icons/add-favorite.svg'
-						}
-						alt='add favorite'
-						className='size-full object-contain select-none'
-					/>
-				</div>
+	const navigate = useNavigate()
 
-				<div className='max-w-[219px] h-full select-none'>
+	return (
+		<div className='relative w-[340px] h-[400px] max-ss:w-full bg-white rounded-[20px] drop-shadow-lg shadow-black'>
+			<div
+				className='absolute top-4 right-6 w-5 h-5 cursor-pointer'
+				onClick={() => dispatch(toggleFavorite(product))}
+			>
+				<img
+					src={
+						isFavorite
+							? '/icons/remove-favorite.svg'
+							: '/icons/add-favorite.svg'
+					}
+					alt='add favorite'
+					className='size-full object-contain select-none'
+				/>
+			</div>
+
+			<div className='py-5 px-5 flex items-center justify-between flex-col gap-6 h-full' onClick={() => navigate(`/${product.id}`)}>
+				<div className='max-w-[219px] h-full select-none cursor-pointer'>
 					<img
 						src={product.image}
 						alt={product.title}
@@ -34,7 +37,7 @@ const Card = ({ product }: { product: Product }) => {
 					/>
 				</div>
 
-				<div className='flex justify-between items-start w-full'>
+				<div className='flex justify-between items-start flex-wrap w-full'>
 					<div>
 						<p className='font-semibold text-[17px] leading-5 mb-6'>
 							{product.title}

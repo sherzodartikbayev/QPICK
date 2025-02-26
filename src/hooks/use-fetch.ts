@@ -1,14 +1,36 @@
-import { useQuery } from "@tanstack/react-query"
+import { useEffect, useState } from 'react'
+import { Product } from '../types'
 
-const BASE_URL = "http://localhost:3000";
+const useFetch = (url: string) => {
+	const [data, setData] = useState<Product | null>(null)
+	const [isLoading, setIsLoading] = useState<boolean>(false)
+	const [error, setError] = useState<string | null>(null)
 
-export const useFetch = (endpoint: string) => {
-  return useQuery({
-    queryKey: [endpoint],
-    queryFn: async () => {
-      const res = await fetch(`${BASE_URL}/${endpoint}`);
-      if (!res.ok) throw new Error("Failed to fetch data");
-      return res.json();
-    },
-  });
-};
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				setIsLoading(true)
+				const req = await fetch(url)
+
+				if (!req.ok) {
+					throw new Error(req.statusText)
+				}
+
+				const result = await req.json()
+				setData(result)
+			} catch (err) {
+				setError(
+					err instanceof Error ? err.message : 'An unknown error occurred'
+				)
+			} finally {
+				setIsLoading(false)
+			}
+		}
+
+		fetchData()
+	}, [url])
+
+	return { data, isLoading, error }
+}
+
+export default useFetch

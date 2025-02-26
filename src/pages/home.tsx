@@ -13,9 +13,9 @@ const Home = () => {
 				</Banner>
 
 				<div className='my-10'>	
-					<CategoryList title='Cases' endpoint='cases' />
-					<CategoryList title='Headphones' endpoint='headphones' />
-					<CategoryList title='AirPods' endpoint='airpods' />
+					<CategoryList title='Cases' />
+					<CategoryList title='Headphones' />
+					<CategoryList title='AirPods' />
 				</div>
 			</div>
 		</section>

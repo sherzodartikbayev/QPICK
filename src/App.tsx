@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import RootLayout from './layout/root-layout'
-import { Cart, Catalog, Contact, Favorite, Home, ServiceTerms } from './pages'
+import { Cart, Contact, Favorite, Home, ProductPage, ServiceTerms } from './pages'
 
 const App = () => {
 	const route = createBrowserRouter([
@@ -9,7 +9,7 @@ const App = () => {
 			element: <RootLayout />,
 			children: [
 				{
-					index: true,
+					path: '/',
 					element: <Home />,
 				},
 				{
@@ -29,8 +29,8 @@ const App = () => {
 					element: <Contact />,
 				},
 				{
-					path: '/catalog',
-					element: <Catalog />
+					path: '/:id',
+					element: <ProductPage />
 				}
 			],
 		},
