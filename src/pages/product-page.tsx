@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
+import { addToCart } from '../cart-slice/cart-slice'
 import { Button } from '../components'
 import { toggleFavorite } from '../favorites-slice/favorites-slice'
 import useFetch from '../hooks/use-fetch'
@@ -12,13 +13,19 @@ const ProductPage = () => {
 	const { id } = useParams()
 	const dispatch = useDispatch()
 	const favorites = useSelector((state: RootState) => state.favorites)
+
 	const { data, isLoading, error } = useFetch(
 		`http://localhost:3000/products/${id}`
 	)
 
-	// Ensure hooks are always called before returning JSX
 	if (!data) {
-		return <h2>Mahsulot topilmadi</h2>
+		return (
+			<section className='max-w-7xl mx-auto paddingX my-7'>
+				<div className='container w-full min-h-[80vh] flex-center'>
+					<h1>Product not found</h1>
+				</div>
+			</section>
+		)
 	}
 
 	const isFavorite = favorites.some(item => item.id === data.id)
@@ -83,7 +90,7 @@ const ProductPage = () => {
 								Описание и характеристики
 							</p>
 
-							<div>
+							<div className='md:hidden'>
 								<img
 									src='/icons/down-back.svg'
 									alt='down-back'
@@ -117,21 +124,21 @@ const ProductPage = () => {
 
 					<div className='w-3/12 flex flex-col gap-5 max-md:hidden'>
 						<Button>Купить!</Button>
-						<Button>
-							<span className='flex-center gap-3'>
-								<img
-									src='/icons/add-cart.svg'
-									alt=''
-									className='flex w-6 h-6'
-								/>
-								<p className='font-medium text-[15px]'>Добавить в корзину</p>
-							</span>
-						</Button>
+						<button
+							className='flex-center gap-3 py-4 bg-black rounded-2xl'
+							onClick={() => dispatch(addToCart(data))}
+						>
+							<img src='/icons/add-cart.svg' alt='' className='flex w-6 h-6' />
+							<p className='font-medium text-[15px] text-white'>Добавить в корзину</p>
+						</button>
 					</div>
 				</div>
 
 				<div className='w-full flex-between md:hidden'>
-					<button className='w-32 h-14 bg-black rounded-2xl flex-center mr-10'>
+					<button
+						className='w-32 h-14 bg-black rounded-2xl flex-center mr-10'
+						onClick={() => dispatch(addToCart(data))}
+					>
 						<img
 							src='/icons/add-cart.svg'
 							alt='cart'
@@ -141,7 +148,10 @@ const ProductPage = () => {
 
 					<Button className='max-w-16 h-16'>Купить сейчас!</Button>
 
-					<Link to='https://www.whatsapp.com/' className='w-32 h-14 bg-black rounded-2xl flex-center ml-10'>
+					<Link
+						to='https://www.whatsapp.com/'
+						className='w-32 h-14 bg-black rounded-2xl flex-center ml-10'
+					>
 						<img
 							src='/icons/whatsapp-mobile.gif'
 							alt='cart'

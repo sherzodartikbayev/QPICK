@@ -1,16 +1,16 @@
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
 
-const containerStyle = {
-  width: "100%",
-  height: "400px",
-};
-
 const center = {
 	lat: 41.2995,
   lng: 69.2401,
 };
 
-const Map = () => {
+const Map = ({ height } : { height: string }) => {
+  const containerStyle = {
+    width: "100%",
+    height: height,
+  };
+
 	const apiKey = import.meta.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
 
   return (

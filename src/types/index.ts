@@ -20,8 +20,13 @@ export interface Product {
 	star?: string
 	descr?: string
 	details?: string
+	count: number
 }
 
 export interface CategoryListProps {
 	title: string
+}
+
+export interface CartItem extends Product {
+	quantity: number
 }

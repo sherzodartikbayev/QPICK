@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { selectCart } from '../cart-slice/cart-slice'
 import { navbarLinks } from '../constants'
 import { selectFavorites } from '../favorites-slice/favorites-slice'
 
@@ -9,6 +10,7 @@ const Navbar = () => {
 	const [isOpenMenu, setIsOpenMenu] = useState(false)
 
 	const favorites = useSelector(selectFavorites)
+	const cart = useSelector(selectCart) 
 
 	return (
 		<header className='max-w-7xl paddingX mx-auto z-10'>
@@ -63,13 +65,22 @@ const Navbar = () => {
 						<img src='/icons/favorite.svg' alt='favorite icon' width={22} />
 						{favorites.length >= 1 && (
 							<div className='absolute -top-3 -right-3 w-5 h-5 rounded-full bg-orange flex-center'>
-								<p className='font-medium text-lg leading-4 text-white'>{favorites.length}</p>
+								<p className='font-medium text-lg leading-4 text-white'>
+									{favorites.length}
+								</p>
 							</div>
 						)}
 					</Link>
 
 					{/* Cart */}
-					<Link to='/cart'>
+					<Link to='/cart' className='relative'>
+						{cart.length >= 1 && (
+							<div className='absolute -top-3 -right-3 w-5 h-5 rounded-full bg-orange flex-center'>
+								<p className='font-medium text-lg leading-4 text-white'>
+									{cart.length}
+								</p>
+							</div>
+						)}
 						<img src='/icons/cart.svg' alt='cart icon' width={23} />
 					</Link>
 

@@ -13,7 +13,7 @@ const Contact = () => {
 					<div className='w-9/12 py-7 px-7 bg-white rounded-[30px] drop-shadow-lg shadow-black max-md:w-full'>
 						<p className='font-semibold text-[17px] leading-5 mb-5'>Наш офис</p>
 						<div className='rounded-[30px] mb-5'>
-							<Map />
+							<Map height='400px' />
 						</div>
 
 						<div className='flex items-center gap-3'>
