@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { selectCart } from '../cart-slice/cart-slice'
 import { Button, CartCard } from '../components'
 import Map from '../components/map'
@@ -8,6 +9,8 @@ const Cart = () => {
 	document.title = 'Корзина'
 
 	const cart = useSelector(selectCart)
+
+	const navigate = useNavigate()
 
 	return (
 		<section className='max-w-7xl mx-auto paddingX my-7'>
@@ -71,7 +74,9 @@ const Cart = () => {
 								</div>
 							</div>
 
-							<Button>Перейти к оформлению</Button>
+							<div onClick={() => navigate('/check-out')}>
+								<Button>Перейти к оформлению</Button>
+							</div>
 						</div>
 
 						<div className='relative w-full mt-10 md:hidden'>
@@ -98,7 +103,9 @@ const Cart = () => {
 									</div>
 								</div>
 
-								<Button>Перейти к оформлению</Button>
+								<div onClick={() => navigate('check-out')}>
+									<Button>Перейти к оформлению</Button>
+								</div>
 							</div>
 						</div>
 					</div>

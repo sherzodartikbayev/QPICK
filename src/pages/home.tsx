@@ -13,9 +13,7 @@ const Home = () => {
 				</Banner>
 
 				<div className='my-10'>	
-					<CategoryList title='Cases' />
-					<CategoryList title='Headphones' />
-					<CategoryList title='AirPods' />
+					<CategoryList title='Все аксессуары' />
 				</div>
 			</div>
 		</section>

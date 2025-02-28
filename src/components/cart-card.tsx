@@ -48,7 +48,9 @@ const CartCard = ({ product }: { product: Product }) => {
 					</button>
 					<p className='font-semibold text-[17px] text-black'>{count}</p>
 					<button
-						className={`w-8 h-8 bg-orange text-white rounded-full select-none ${count === 0 && 'hidden'}`}
+						className={`w-8 h-8 bg-orange text-white rounded-full select-none ${
+							count === 0 && 'hidden'
+						}`}
 						onClick={() => dispatch(decrement())}
 					>
 						-
@@ -56,7 +58,7 @@ const CartCard = ({ product }: { product: Product }) => {
 				</div>
 
 				<p className='font-semibold text-[15px] leading-4'>
-					{total.toLocaleString()} ₸
+					{total.toLocaleString()} <span>₸</span>
 				</p>
 			</div>
 		</div>

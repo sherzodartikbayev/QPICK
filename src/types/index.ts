@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { JSX } from 'react/jsx-runtime'
 export interface ButtonProps {
 	children: string | ReactNode
 	link?: string
@@ -10,6 +11,7 @@ export interface BannerProps {
 }
 
 export interface Product {
+	map(arg0: (product: Product) => JSX.Element): ReactNode
 	id: string
 	title: string
 	image: string
@@ -20,7 +22,6 @@ export interface Product {
 	star?: string
 	descr?: string
 	details?: string
-	count: number
 }
 
 export interface CategoryListProps {
@@ -29,4 +30,10 @@ export interface CategoryListProps {
 
 export interface CartItem extends Product {
 	quantity: number
+}
+
+export interface InputProps {
+	width: string
+	icon?: string
+	title: string
 }
