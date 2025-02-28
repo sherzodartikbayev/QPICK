@@ -3,6 +3,8 @@ import { Button, Input } from '../components'
 import Map from '../components/map'
 
 const Checkout = () => {
+	document.title = 'Оформление заказа'
+		
 	return (
 		<section className='max-w-7xl mx-auto paddingX my-8'>
 			<div className='container w-full min-h-screen'>

@@ -2,6 +2,8 @@ import { Link, useRouteError } from 'react-router-dom'
 import { Button } from '../components'
 
 const ErrorPage = () => {
+	document.title = 'Ошибка | Страница временно недоступна'
+
 	const error = useRouteError()
 
 	if (error instanceof Response && error.status === 404) {

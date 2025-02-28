@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { Button } from '../components'
 
 const Order = () => {
+	document.title = 'Заказ оформлен'
+
 	const num = Math.floor(Math.random() * 999999)
 
 	return (

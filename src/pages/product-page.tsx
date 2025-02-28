@@ -9,6 +9,7 @@ import { RootState } from '../store/store'
 import ErrorPage from './error-page'
 
 const ProductPage = () => {
+	
 	const [isOpenDetail, setIsOpenDetail] = useState(true)
 
 	const { id } = useParams()
@@ -19,13 +20,16 @@ const ProductPage = () => {
 		`http://localhost:3000/products/${id}`
 	)
 
+	
 	if (isLoading) return <Loader />
 	if (error) return <ErrorPage />
-
+	
 	if (!data) {
 		return <Loader />
 	}
-
+	
+	document.title = `Товара - ${data.title}`
+	
 	const isFavorite = favorites.some(
 		(item: { id: string }) => item.id === data.id
 	)
