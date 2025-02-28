@@ -5,7 +5,7 @@ import Card from './card'
 import Loader from './loader'
 
 const CategoryList = ({ title }: CategoryListProps) => {
-	const { data, isLoading, error } = useFetch('http://localhost:3000/products')
+	const { data, isLoading, error } = useFetch('https://qpick-tm3g.onrender.com/products')
 
 	if (isLoading) return <Loader />
 	if (error) return <ErrorPage />

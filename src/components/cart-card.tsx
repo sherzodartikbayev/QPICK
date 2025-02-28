@@ -8,7 +8,6 @@ const CartCard = ({ product }: { product: Product }) => {
 	const dispatch = useDispatch()
 	const count = useSelector((state: RootState) => state.counter.count)
 
-	// Price tozalanadi va numberga o'tkaziladi
 	const productPrice = +product.price.replace(/ /g, '').replace('₸', '').trim()
 	const total = productPrice * count
 

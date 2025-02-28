@@ -17,7 +17,7 @@ const ProductPage = () => {
 	const favorites = useSelector((state: RootState) => state.favorites)
 
 	const { data, isLoading, error } = useFetch(
-		`http://localhost:3000/products/${id}`
+		`https://qpick-tm3g.onrender.com/products/${id}`
 	)
 
 	
