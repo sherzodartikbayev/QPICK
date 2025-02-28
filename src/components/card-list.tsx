@@ -1,12 +1,14 @@
 import useFetch from '../hooks/use-fetch'
+import { ErrorPage } from '../pages'
 import { CategoryListProps, Product } from '../types'
 import Card from './card'
+import Loader from './loader'
 
 const CategoryList = ({ title }: CategoryListProps) => {
 	const { data, isLoading, error } = useFetch('http://localhost:3000/products')
 
-	if (isLoading) return <p>Loading {title}...</p>
-	if (error) return <p>Error loading {title}</p>
+	if (isLoading) return <Loader />
+	if (error) return <ErrorPage />
 
 	if (data)
 		return (

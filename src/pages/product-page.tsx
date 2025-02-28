@@ -2,10 +2,11 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import { addToCart } from '../cart-slice/cart-slice'
-import { Button } from '../components'
+import { Button, Loader } from '../components'
 import { toggleFavorite } from '../favorites-slice/favorites-slice'
 import useFetch from '../hooks/use-fetch'
 import { RootState } from '../store/store'
+import ErrorPage from './error-page'
 
 const ProductPage = () => {
 	const [isOpenDetail, setIsOpenDetail] = useState(true)
@@ -18,17 +19,16 @@ const ProductPage = () => {
 		`http://localhost:3000/products/${id}`
 	)
 
+	if (isLoading) return <Loader />
+	if (error) return <ErrorPage />
+
 	if (!data) {
-		return (
-			<section className='max-w-7xl mx-auto paddingX my-7'>
-				<div className='container w-full min-h-[80vh] flex-center'>
-					<h1>Product not found</h1>
-				</div>
-			</section>
-		)
+		return <Loader />
 	}
 
-	const isFavorite = favorites.some(item => item.id === data.id)
+	const isFavorite = favorites.some(
+		(item: { id: string }) => item.id === data.id
+	)
 
 	return (
 		<section className='max-w-7xl mx-auto paddingX my-7'>
@@ -116,37 +116,41 @@ const ProductPage = () => {
 										</li>
 									))}
 								</ul>
-							) : (
-								<p></p>
-							)}
+							) : null}
 						</div>
 					</div>
 
 					<div className='w-3/12 flex flex-col gap-5 max-md:hidden'>
-						<Button>Купить!</Button>
+						<Button link='/check-out'>Купить!</Button>
 						<button
 							className='flex-center gap-3 py-4 bg-black rounded-2xl'
 							onClick={() => dispatch(addToCart(data))}
 						>
 							<img src='/icons/add-cart.svg' alt='' className='flex w-6 h-6' />
-							<p className='font-medium text-[15px] text-white'>Добавить в корзину</p>
+							<p className='font-medium text-[15px] text-white'>
+								Добавить в корзину
+							</p>
 						</button>
 					</div>
 				</div>
 
 				<div className='w-full flex-between md:hidden'>
-					<button
-						className='w-32 h-14 bg-black rounded-2xl flex-center mr-10'
-						onClick={() => dispatch(addToCart(data))}
-					>
-						<img
-							src='/icons/add-cart.svg'
-							alt='cart'
-							className='w-6 h-6 object-contain'
-						/>
-					</button>
+					<Link to={'/cart'}>
+						<button
+							className='w-14 h-14 bg-black rounded-2xl flex-center mr-10'
+							onClick={() => dispatch(addToCart(data))}
+						>
+							<img
+								src='/icons/add-cart.svg'
+								alt='cart'
+								className='w-6 h-6 object-contain'
+							/>
+						</button>
+					</Link>
 
-					<Button className='max-w-16 h-16'>Купить сейчас!</Button>
+					<Button link='/check-out' className='w-full h-16'>
+						Купить сейчас!
+					</Button>
 
 					<Link
 						to='https://www.whatsapp.com/'

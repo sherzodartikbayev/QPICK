@@ -4,6 +4,7 @@ import {
 	Cart,
 	Checkout,
 	Contact,
+	ErrorPage,
 	Favorite,
 	Home,
 	Order,
@@ -16,6 +17,7 @@ const App = () => {
 		{
 			path: '/',
 			element: <RootLayout />,
+			errorElement: <ErrorPage />,
 			children: [
 				{
 					path: '/',
@@ -28,6 +30,12 @@ const App = () => {
 				{
 					path: '/cart',
 					element: <Cart />,
+					children: [
+						{
+							path: 'check-out',
+							element: <Checkout />,
+						},
+					],
 				},
 				{
 					path: '/service-terms',
@@ -47,8 +55,8 @@ const App = () => {
 				},
 				{
 					path: '/order',
-					element: <Order />
-				}
+					element: <Order />,
+				},
 			],
 		},
 	])

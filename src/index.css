@@ -29,16 +29,38 @@ body {
 
 /* Font Styles */
 .product-card-title {
-	@apply font-montserrat font-semibold text-[17px] leading-5
+	@apply font-montserrat font-semibold text-[17px] leading-5;
 }
 
 /* Navbar Styles */
 .drop-down button:focus + ul {
-  opacity: 1;
-  pointer-events: all;
-  transform: translateY(0);
-} 
+	opacity: 1;
+	pointer-events: all;
+	transform: translateY(0);
+}
 
 .navbar__mobile__text {
-	@apply text-[15px] font-medium leading-5 hover:text-orange transition-all duration-300
+	@apply text-[15px] font-medium leading-5 hover:text-orange transition-all duration-300;
+}
+
+/* Loader */
+.loader {
+	width: 48px;
+	height: 48px;
+	border: 5px solid #000;
+	border-bottom-color: transparent;
+	border-radius: 50%;
+	display: inline-block;
+	box-sizing: border-box;
+	animation: rotation 1s linear infinite;
+	margin: auto; 
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
