@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+![qpick](https://github.com/user-attachments/assets/68f65795-6d89-41cc-8394-07b532ab2119)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# QPICK
 
-Currently, two official plugins are available:
+QPICK is a e-commerce website built using React, TypeScript, TailwindCSS, Redux Toolkit and React Router Dom.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 🚀 Technologies Used
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Redux Toolkit**
+- **React Router Dom**
+- **JSON-Server**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠 Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+# Clone the repository
+git clone https://github.com/sherzodartikbayev/QPICK.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+# Navigate to the project directory
+cd qpick
 ```
+
+```bash
+# Install dependencies
+npm install  # or yarn
+```
+
+```bash
+# Start the development server
+npm run dev  # or yarn dev
+```
+
+## 📸 Screenshots
+
+-
+- Home Page
+- 
+![qpick-1](https://github.com/user-attachments/assets/aebd05bc-833d-4957-bdea-89f6b2f7b028)
+
+-
+- Product Page
+- 
+- ![qpick-2](https://github.com/user-attachments/assets/7d5fa57e-170a-414f-8ad1-e9c3c411ee82)
+
+-
+- Cart Page
+- ![qpick-4](https://github.com/user-attachments/assets/51077e62-ae9f-4050-9cf3-0034367a355b)
+
+-
+- Check-Out Page
+- 
+- ![qpick-3](https://github.com/user-attachments/assets/94bebc73-4387-4ae1-a2f6-905c9fae3500)
+
+-
+- Contact Page
+- ![qoick-5](https://github.com/user-attachments/assets/23ec310b-316b-47e3-b98f-ac72c4def795)
+-
