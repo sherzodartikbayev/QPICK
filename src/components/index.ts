@@ -1,6 +1,7 @@
+export { default as Button } from './button'
 export { default as Card } from './card'
 export { default as CardList } from './card-list'
-export { default as Button, default as Carousel } from './carousel'
+export { default as Carousel } from './carousel'
 export { default as CartCard } from './cart-card'
 export { default as Footer } from './footer'
 export { default as Input } from './input'

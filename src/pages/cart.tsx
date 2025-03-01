@@ -12,8 +12,6 @@ const Cart = () => {
 
 	const navigate = useNavigate()
 
-	console.log(logger)
-
 	return (
 		<section className='max-w-7xl mx-auto paddingX my-7'>
 			<div className='container w-full min-h-[100vh]'>

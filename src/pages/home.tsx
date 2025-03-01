@@ -1,5 +1,5 @@
+import { Carousel } from '../components'
 import CategoryList from '../components/card-list'
-import Carousel from '../components/carousel'
 import { slides } from '../constants'
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
 		<section className='max-w-7xl paddingX mx-auto'>
 			<div className='container w-full h-auto pb-10'>
 				{/* Advert Carousel */}
-				<Carousel slides={slides} />
+				<Carousel items={slides} />
 
 				<div className='my-10'>
 					<CategoryList title='Все аксессуары' />

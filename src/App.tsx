@@ -57,11 +57,11 @@ const App = () => {
 					path: '/order',
 					element: <Order />,
 				},
-				{
-					path: '*',
-					element: <ErrorPage />,
-				},
 			],
+		},
+		{
+			path: '*',
+			element: <ErrorPage />,
 		},
 	])
 

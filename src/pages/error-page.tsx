@@ -8,7 +8,7 @@ const ErrorPage = () => {
 	const error = useRouteError() as CustomError
 
 	// 404
-	if (error.status === 404) {
+	if (error) {
 		return (
 			<section className='max-w-7xl mx-auto paddingX'>
 				<div className='container w-full min-h-[80vh] flex-center flex-col'>
