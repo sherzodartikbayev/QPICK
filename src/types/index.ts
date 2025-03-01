@@ -37,3 +37,8 @@ export interface InputProps {
 	icon?: string
 	title: string
 }
+
+export interface CustomError {
+	status?: number
+	message?: string
+}

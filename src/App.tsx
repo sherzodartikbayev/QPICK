@@ -8,8 +8,7 @@ import {
 	Favorite,
 	Home,
 	Order,
-	ProductPage,
-	ServiceTerms,
+	ServiceTerms
 } from './pages'
 
 const App = () => {
@@ -45,10 +44,10 @@ const App = () => {
 					path: '/contact',
 					element: <Contact />,
 				},
-				{
-					path: '/:id',
-					element: <ProductPage />,
-				},
+				// {
+				// 	path: '/:id',
+				// 	element: <ProductPage />,
+				// },
 				{
 					path: '/check-out',
 					element: <Checkout />,
@@ -56,6 +55,10 @@ const App = () => {
 				{
 					path: '/order',
 					element: <Order />,
+				},
+				{
+					path: '*',
+					element: <ErrorPage />,
 				},
 			],
 		},
