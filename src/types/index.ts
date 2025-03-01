@@ -42,3 +42,8 @@ export interface CustomError {
 	status?: number
 	message?: string
 }
+
+export interface CarouselProps {
+	slides: { image: string; text: string }[]
+	interval?: number
+}

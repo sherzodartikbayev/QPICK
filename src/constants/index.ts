@@ -99,3 +99,24 @@ export const ContactSocialMedias = [
 		href: 'https://telegram.org/'
 	},
 ]
+
+
+// Carousel 
+export const slides = [
+	{
+		image: '/images/iphone/iphone-13.png',
+		text: 'Аксессуары для iPhone 13 Pro Max',
+	},
+	{
+		image: '/images/iphone/iphone-14.png',
+		text: 'Аксессуары для iPhone 14 Pro Max',
+	},
+	{
+		image: '/images/iphone/iphone-15.png',
+		text: 'Аксессуары для iPhone 15 Pro Max',
+	},
+	{
+		image: '/images/iphone/iphone-16.png',
+		text: 'Аксессуары для iPhone 16 Pro Max',
+	},
+]
