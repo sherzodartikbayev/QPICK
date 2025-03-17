@@ -56,3 +56,11 @@ npm run dev  # or yarn dev
 - ## Contact Page
 ![qoick-5](https://github.com/user-attachments/assets/23ec310b-316b-47e3-b98f-ac72c4def795)
 
+
+# 📬 Contact
+If you have any questions or suggestions, feel free to reach out:
+
+- GitHub: [sherzodartikbayev](https://github.com/sherzodartikbayev)
+- Email: sherzadartikbayev@gmail.com
+- Telegram: [sherzod_artikbayev](https://t.me/sherzod_artikbayev)
+- LinkedIn: [Sherzod Artikbayev](https://www.linkedin.com/in/sherzod3105/)
