@@ -4,6 +4,8 @@
 
 QPICK is a e-commerce website built using React, TypeScript, TailwindCSS, Redux Toolkit and React Router Dom.
 
+# 🌐 Live Demo
+Check out the live demo: [QPICK](https://qpick-rho.vercel.app/)
 
 # 🚀 Technologies Used
 - **React**
@@ -64,3 +66,5 @@ If you have any questions or suggestions, feel free to reach out:
 - Email: sherzadartikbayev@gmail.com
 - Telegram: [sherzod_artikbayev](https://t.me/sherzod_artikbayev)
 - LinkedIn: [Sherzod Artikbayev](https://www.linkedin.com/in/sherzod3105/)
+- Facebook: [Sherzod Artikbayev](https://www.facebook.com/sherz0dartikbayev)
+- Twitter: [Sherzod Artikbayev](https://x.com/SherzadArt74344)
